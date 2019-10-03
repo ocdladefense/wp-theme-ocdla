@@ -1,0 +1,20 @@
+{
+    "name": "clickpdx/ocdla",
+    "description": "A WordPress child theme that uses Wireframe as a parent",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "José Bernal",
+            "email": "jbernal.web.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ]
+}

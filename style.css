@@ -1,0 +1,64 @@
+/*
+ Theme Name:   OADP
+ Theme URI:    http://example.com/oadp-theme/
+ Description:  Theme for OADP
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     wireframe
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  wireframechild
+*/
+
+/*Global Header Styles*/
+.default-logo-image{
+    display:none;
+}
+/*Header Styles*/
+
+/*Menu Styles*/
+
+/*Page Styles*/
+.default-icon-image{
+    display:none;
+}
+
+/*Post Styles*/
+
+/*Footer Styles*/
+.footer-default-widget-left{
+    display: none;
+}
+
+
+#global-header {
+	transition: background-color 0.4s ease-out;
+	transition: border-bottom-color 0.8s ease-out;
+}
+
+.global-header {
+	background-color: transparent;
+	border-bottom-width: 1px;
+	border-bottom-color: transparent;
+	border-bottom-style: solid;
+}
+
+.scrollToDark {
+	background-color:rgba(255,255,255,0.9);
+	border-bottom-color: rgba(0,0,0,0.3);
+}
+
+
+
+/*
+#global-header.scrollInit {
+	background-color: #ccaa39;
+}
+
+#global-header.scrollInit .nav {
+	background-color:#53638c;
+}	
+
+*/
