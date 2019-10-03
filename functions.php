@@ -78,15 +78,11 @@ function init_transparent_header() {
  */
 function child_widgets_init() {
 
-	$overrideWidgetAreaIds = array(
-		'sidebar-1' => 'sidebar-5', // Left Sidebar
-		'sidebar-2' => 'sidebar-1'
-	);
 
 
 	$leftSidebar = array(
 		'name'          => __( 'Left Sidebar', 'wireframe' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar-1', // From parent theme.
 		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -97,7 +93,7 @@ function child_widgets_init() {
 	
 	$rightSidebar = array(
 		'name'          => __( 'Right Sidebar', 'wireframe' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'sidebar-2', // From parent theme.
 		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -115,7 +111,7 @@ function child_widgets_init() {
 	
 	register_sidebar(
 		array(
-			'name'          => __( 'Banner Widget Area', 'twentyseventeen' ),
+			'name'          => __( 'Banner Widget Area', 'wireframechild_ocdla' ),
 			'id'            => 'sidebar-2',
 			'description'   => __( 'Add widgets here to appear in your banner area.', 'twentyseventeen' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -127,7 +123,7 @@ function child_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer Widget Area', 'twentyseventeen' ),
+			'name'          => __( 'Footer Widget Area', 'wireframechild_ocdla' ),
 			'id'            => 'sidebar-3',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -138,7 +134,7 @@ function child_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Global Header Widget Area', 'twentyseventeen' ),
+			'name'          => __( 'Global Header Widget Area', 'wireframechild_ocdla' ),
 			'id'            => 'sidebar-4',
 			'description'   => __( 'Add widgets to appear in the global header.', 'twentyseventeen' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
