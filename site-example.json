@@ -1,0 +1,26 @@
+{
+	"background-color":"#fff",
+	"color":"#333",
+	"banner-image":"https:\/\/www.sites.com\/my-special-image",
+	"elements":{
+		"global-header":{
+			"css":{
+				"background-color":"#000",
+				"color":"rgba(255,255,255,0.8)"
+			}
+		},
+		"site-content":{
+			"css":{
+				"background-color":"#000",
+				"color":"#fff"
+			}
+		}
+	},
+	"site-info":{
+		"address":"1234 Super duper Lane, Eugene, OR  97402",
+		"copyright":"Copyright 2019, OCDLA"
+	},
+	"comments":[
+		{"Note":"Represent a theme instance as JSON."}
+	]
+}

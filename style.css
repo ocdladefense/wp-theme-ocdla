@@ -35,7 +35,6 @@
 
 #global-header {
 	transition: background-color 0.4s ease-out;
-	transition: border-bottom-color 0.8s ease-out;
 }
 
 .global-header {
@@ -49,16 +48,3 @@
 	background-color:rgba(255,255,255,0.9);
 	border-bottom-color: rgba(0,0,0,0.3);
 }
-
-
-
-/*
-#global-header.scrollInit {
-	background-color: #ccaa39;
-}
-
-#global-header.scrollInit .nav {
-	background-color:#53638c;
-}	
-
-*/

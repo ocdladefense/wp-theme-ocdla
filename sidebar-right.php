@@ -10,11 +10,11 @@
  * @version 1.0
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar-2' ) ) {
 	return;
 }
 ?>
 
 <aside id="sidebar-right" class="ocdla-sidebar widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Right Sidebar', 'wireframe' ); ?>">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
 </aside><!-- #secondary -->

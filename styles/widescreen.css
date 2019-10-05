@@ -13,15 +13,7 @@
 		padding:0px;
 	}
 	
-	.site-header {
-        height: 720px;
-		text-align:center;
-	}
-	
-	.site-header > div {
-		max-width:80%;
-		margin:0 auto;
-	}
+
 
 	.menu-toggle{
 			margin:0;

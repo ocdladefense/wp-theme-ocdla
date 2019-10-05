@@ -23,14 +23,11 @@ body{
 	overflow:hidden;
 }
 
-.global-header-content{
+.global-header-content {
 	padding:20px;
 }
 
-.site-header {
-	margin: 0 auto;
-	margin-top: 63px;
-}	
+.site-header {}
 
 .custom-logo {}
 
@@ -81,18 +78,6 @@ body{
 #top-menu {
 	position: relative;
   z-index: 999;
-}
-
-
-
-.navigation-top {
-	position: static;
-	top: auto;
-	bottom:auto;
-	left:auto;
-	right:auto;
-	background: none;
-	border: none;
 }
 
 
