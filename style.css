@@ -12,39 +12,80 @@
  Text Domain:  wireframechild_ocdla
 */
 
-/*Global Header Styles*/
-.default-logo-image{
-    display:none;
-}
-/*Header Styles*/
-
-/*Menu Styles*/
-
-/*Page Styles*/
-.default-icon-image{
-    display:none;
-}
-
-/*Post Styles*/
-
-/*Footer Styles*/
-.footer-default-widget-left{
-    display: none;
-}
-
 
 #global-header {
-	transition: background-color 0.4s ease-out;
+	border-bottom:1px solid rgba(150,150,150,0.2);
+	background-color:rgba(230,230,230,0.7);
+}	
+
+ul.gradient-background {
+  zoom: 1;
+  background: #36b0b6;
+  background: -moz-linear-gradient(top, #36b0b6 0%, #2a8a8f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36b0b6), color-stop(100%, #2a8a8f));
+  background: -webkit-linear-gradient(top, #36b0b6 0%, #2a8a8f 100%);
+  background: -o-linear-gradient(top, #36b0b6 0%, #2a8a8f 100%);
+  background: -ms-linear-gradient(top, #36b0b6 0%, #2a8a8f 100%);
+  background: linear-gradient(top, #36b0b6 0%, #2a8a8f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top-color', endColorstr='@bottom-color', GradientType=0);
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color:#fff !important;
 }
 
-.global-header {
-	background-color: transparent;
-	border-bottom-width: 1px;
-	border-bottom-color: transparent;
-	border-bottom-style: solid;
+.custom-logo {
+	width:100px;
+	height:50px;
 }
 
-.scrollToDark {
-	background-color:rgba(255,255,255,0.9);
-	border-bottom-color: rgba(0,0,0,0.3);
+#sidebar-left {
+	width:10%;
+}
+
+.sub-menu {
+	width:50%;
+	left:100% !important;
+}
+
+.menu li {
+	cursor:pointer;
+}
+
+.sub-menu ul {
+	display:none;
+}
+
+
+
+.sidebar .menu li {
+	background-color: rgba(255,255,255,1.0);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 2.4em;
+	border-bottom: 1px solid rgba(225,225,225,0.2);
+	color:rgba(0,0,0,0.9);
+}
+
+.sidebar .menu li:hover .sub-menu {
+	background-color:#fff;
+	border-right:1px solid #eee;
+}
+
+.sub-menu {
+	width:200px;
+}
+
+#global-header .menu li {
+	transition: 
+}
+#global-header .menu li:hover {
+	border-bottom:1px solid rgba(100,100,100,0.3);
+	/* border-right:1px solid rgba(100,100,100,0.3);
+	border-left:1px solid rgba(100,100,100,0.1);
+	border-top:1px solid rgba(100,100,100,0.1);
+	*/
 }
