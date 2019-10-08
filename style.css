@@ -46,23 +46,16 @@ ul.gradient-background {
 	width:10%;
 }
 
-.sub-menu {
-	width:50%;
-	left:100% !important;
-}
+
 
 .menu li {
 	cursor:pointer;
 }
 
-.sub-menu ul {
-	display:none;
-}
-
 
 
 .sidebar .menu li {
-	background-color: rgba(255,255,255,1.0);
+	background-color: inherit;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 2.4em;
@@ -70,13 +63,52 @@ ul.gradient-background {
 	color:rgba(0,0,0,0.9);
 }
 
+
+
 .sidebar .menu li:hover .sub-menu {
-	background-color:#fff;
-	border-right:1px solid #eee;
+
+}
+
+
+
+.sidebar .menu > li:hover {
+	z-index:101;
+	border-bottom:1px solid rgba(100,100,100,0.2);	
+}
+
+#sidebar-left .sub-menu li:hover {
+	background-color:rgba(100,100,100,0.2);	
 }
 
 .sub-menu {
-	width:200px;
+	width:300px;
+	background-color: rgba(255,255,255,0.9);
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #eee;
+	z-index:10;
+	left:85% !important;
+	top:-3px;
+}
+
+ul.sub-menu {
+	padding-left:0px !important;
+}
+
+#sidebar-right {
+	line-height: 2.0em;
+	color: #666;
+}
+
+@media screen and(min-width: 1200px) {
+	#primary {
+		padding-left:4%;
+		padding-right:4%;
+	}
+}
+
+.sub-menu ul {
+	display:none;
 }
 
 #global-header .menu li {
@@ -88,4 +120,11 @@ ul.gradient-background {
 	border-left:1px solid rgba(100,100,100,0.1);
 	border-top:1px solid rgba(100,100,100,0.1);
 	*/
+}
+
+
+
+.sub-menu li:first-child {
+	padding-left: 8px;
+	margin-left:-8px;
 }
