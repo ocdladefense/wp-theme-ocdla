@@ -16,23 +16,23 @@ function add_child_stylesheets() {
 	$basedir = get_stylesheet_directory_uri()."/styles";
 	
 	$styles = array(
-		'child.structure-overrides' => 'structure.css',
-		'child.header-overrides' => 'header.css',
-		'child.image-overrides' => 'images.css',
-		'child.menu-overrides' => 'menu.css',
-		'child.post-overrides' => 'post.css',
-		'child.footer-overrides' => 'footer.css',
-		'child.homepage-overrides' => 'home.css',
-		'child.widescreen-overrides' => 'widescreen.css',
-		'child.sidebar-overrides' => 'sidebar.css',
-		'child.widget-overrides' => 'widget.css',
+		'child.structure' => 'structure.css',
+		'child.header' => 'header.css',
+		'child.image' => 'images.css',
+		'child.menu' => 'menu.css',
+		'child.post' => 'post.css',
+		'child.footer' => 'footer.css',
+		'child.homepage' => 'home.css',
+		'child.widescreen' => 'widescreen.css',
+		'child.sidebar' => 'sidebar.css',
+		'child.widget' => 'widget.css',
 	);
 	$styles = array();
 	
 	wp_enqueue_style(
 		'child-styles',
 		get_stylesheet_directory_uri() . '/style.css',
-		array( 'parent-styles','menu-overrides'),
+		array( 'parent-styles','menu'),
 		wp_get_theme()->get('Version')
 	);
     
