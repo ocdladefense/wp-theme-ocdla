@@ -15,7 +15,7 @@
 
 #global-header {
 	border-bottom:1px solid rgba(150,150,150,0.2);
-	background-color:rgba(230,230,230,0.7);
+	background-color:rgba(250,250,250,1.0);
 }	
 
 ul.gradient-background {
@@ -37,10 +37,7 @@ ul.gradient-background {
   color:#fff !important;
 }
 
-.custom-logo {
-	width:100px;
-	height:50px;
-}
+
 
 #sidebar-left {
 	width:10%;
