@@ -10,7 +10,7 @@
 
 ?>
 <!--USE ID & CLASSNAME OF "main-navigation" if you want to have the menu collapsible on smaller screens?-->
-<nav class="menu collapsible menu-button" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'wireframe' ); ?>">
+<nav class="menu" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'wireframe' ); ?>">
 
 	<?php if(has_nav_menu('top')):
 		wp_nav_menu(
