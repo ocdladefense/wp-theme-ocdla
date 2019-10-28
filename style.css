@@ -132,6 +132,7 @@ h6 {
 
 a {
 	color: rgba(0,0,139,0.8);
+	font-weight:bold;
 }
 
 a:hover {
