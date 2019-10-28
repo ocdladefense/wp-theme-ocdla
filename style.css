@@ -40,7 +40,7 @@ ul.gradient-background {
 
 
 #sidebar-left {
-	width:10%;
+	width:15%;
 }
 
 
@@ -56,7 +56,7 @@ ul.gradient-background {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 2.4em;
-	border-bottom: 1px solid rgba(225,225,225,0.2);
+	border-bottom: 1px solid rgba(75,58,0,0.2);
 	color:rgba(0,0,0,0.9);
 }
 
@@ -70,7 +70,7 @@ ul.gradient-background {
 
 .sidebar .menu > li:hover {
 	z-index:101;
-	border-bottom:1px solid rgba(100,100,100,0.2);	
+	/* border-bottom:1px solid rgba(100,100,100,0.2);	*/
 }
 
 #sidebar-left .sub-menu li:hover {
@@ -137,5 +137,13 @@ a {
 
 a:hover {
 	text-decoration:underline;
+}
+
+.menu a {
+	font-weight:normal;
+}
+
+.menu a:hover {
+	text-decoration:none;
 }
 
