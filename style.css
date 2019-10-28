@@ -50,7 +50,9 @@ ul.gradient-background {
 }
 
 
-
+.sidebar .menu {
+	max-width: 200px;
+}	
 .sidebar .menu li {
 	background-color: inherit;
 	font-weight: 400;
@@ -150,5 +152,9 @@ a:hover {
 
 h1,h2,h3,h4,h5,h6 {
 	clear:both;
+}
+
+h4,h5,h6 {
+	color: #BF9500;
 }
 
