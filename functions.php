@@ -5,13 +5,6 @@
 add_action( 'wp_enqueue_scripts', 'init_transparent_header' );
 
 
-
-// Only called when the child theme declares this function.
-if(function_exists('add_child_stylesheets')) {
-	add_action('wp_enqueue_scripts', 'add_child_stylesheets');
-}
-
-
 /**
   * @function add_child_stylesheets
   *
@@ -38,7 +31,7 @@ function add_child_stylesheets() {
 	wp_enqueue_style(
 		'child-styles',
 		get_stylesheet_directory_uri() . '/style.css',
-		array( 'parent-styles','menu','sidebar')
+		array( 'wireframe-style','menu','sidebar')
 		//wp_get_theme()->get('Version')
 	);
   
