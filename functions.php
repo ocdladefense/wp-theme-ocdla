@@ -6,6 +6,11 @@ add_action( 'wp_enqueue_scripts', 'init_transparent_header' );
 
 
 
+// Only called when the child theme declares this function.
+if(function_exists('add_child_stylesheets')) {
+	add_action('wp_enqueue_scripts', 'add_child_stylesheets');
+}
+
 
 /**
   * @function add_child_stylesheets
@@ -29,12 +34,14 @@ function add_child_stylesheets() {
 	);
 	$styles = array();
 	
+	
 	wp_enqueue_style(
 		'child-styles',
 		get_stylesheet_directory_uri() . '/style.css',
-		array( 'parent-styles','menu'),
-		wp_get_theme()->get('Version')
+		array( 'parent-styles','menu','sidebar')
+		//wp_get_theme()->get('Version')
 	);
+  
     
 	foreach($styles as $id => $uri) {
 		$dep = explode('.',$id);//Setup dependency with parent theme stylesheet
