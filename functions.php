@@ -31,7 +31,7 @@ function add_child_stylesheets() {
 	wp_enqueue_style(
 		'child-styles',
 		get_stylesheet_directory_uri() . '/style.css',
-		array( 'wireframe-style','menu','sidebar')
+		array( 'parent-styles','menu','sidebar')
 		//wp_get_theme()->get('Version')
 	);
   
