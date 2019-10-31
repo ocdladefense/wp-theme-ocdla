@@ -18,6 +18,10 @@
 	background-color:rgba(250,250,250,1.0);
 }	
 
+body:not(.home) .site-content-contain {
+	margin-top:95px;
+}
+
 ul.gradient-background {
   zoom: 1;
   background: #36b0b6;
@@ -149,16 +153,38 @@ a:hover {
 	text-decoration:none;
 }
 
-
-h1,h2,h3,h4,h5,h6 {
+/**
+  * block styles
+  */
+h1, h2, h3, h4, h5, h6 {
 	clear:both;
 }
 
-h4,h5,h6 {
-	color: #BF9500;
+h1 {
+	font-size:2.5em;
+}
+
+h2 {
+	color: rgba(210,149,50,1.0);
 }
 
 h3 {
-	margin-top: 2.0em;
-	margin-bottom: 0.0em;
+	color:rgba(0,0,0,0.7);
+}
+
+h4 {
+	text-transform:uppercase;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top:3.0em;
+	margin-bottom:0px;
+}
+
+h5, h6 {
+	font-size: 0.83em;
+}
+
+h4, h5 {
+	color: #bf9500;
 }
