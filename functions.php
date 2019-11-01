@@ -5,6 +5,14 @@
 add_action( 'wp_enqueue_scripts', 'init_transparent_header' );
 
 
+
+function child_block_editor_styles() {
+	// Block styles.
+	wp_enqueue_style( 'block-editor-style', get_theme_file_uri( '/assets/css/editor-blocks.css' ), array('wireframe-block-editor-style'), '1.1' );
+}
+
+
+
 /**
   * @function add_child_stylesheets
   *
