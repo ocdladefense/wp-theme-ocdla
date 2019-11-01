@@ -53,6 +53,7 @@ body:not(.home) h1.entry-title {
 	.edit-post-visual-editor .editor-block-list__block h1 {
 		font-size: 30px;
 		font-size: 1.875rem;
+		font-weight:bold !important;
 	}
 
 	.edit-post-visual-editor .editor-block-list__block h2 {
