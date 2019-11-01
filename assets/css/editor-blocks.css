@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap');
 
 .editor-styles-wrapper {
-	max-width:100% !important;
+	width: 100% !important;
+	max-width:840px !important;
 }
 
 body:not(.home) h1.entry-title {
@@ -36,6 +37,10 @@ body:not(.home) h1.entry-title {
     max-width: none;
 }
 
+.editor-styles-wrapper p {
+	font-size: 0.9em !important;
+	line-height: 1.6em !important;
+}
 
 
 @media screen and (min-width: 30em) {
