@@ -194,3 +194,13 @@ h5, h6 {
 h4, h5 {
 	color: #bf9500;
 }
+
+
+/**
+ * Handle case where nested headings create too much spacing.
+ * Reduce the margin top
+ */
+h1 + h2 {
+    margin-top: 0px;
+    margin-bottom: 1.0em;
+}
