@@ -221,8 +221,10 @@ h2 {
 }
 
 .bottom-spacer {
-	margin-bottom: 75px;
+	/* margin-bottom: 75px; */
 }
+
+
 
 .bottom-spacer + .wp-block-image {
 	padding-top: 35px;
