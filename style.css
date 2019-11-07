@@ -242,4 +242,9 @@ h2 {
 
 .wp-block-image {
 	margin-bottom: 0px !important;
+	clear:both;
+}
+
+.break {
+	
 }
