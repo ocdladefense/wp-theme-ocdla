@@ -38,8 +38,12 @@ body:not(.home) h1.entry-title {
 }
 
 .editor-styles-wrapper p {
-	font-size: 0.9em !important;
+	font-size: 14.4px !important;  
 	line-height: 1.6em !important;
+}
+
+.editor-styles-wrapper p.bottom-spacer {
+	margin-bottom:75px;
 }
 
 
