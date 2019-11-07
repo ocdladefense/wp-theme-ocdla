@@ -224,8 +224,8 @@ h2 {
 	margin-bottom: 75px;
 }
 
-.top-spacer {
-	padding-top: 25px;
+.bottom-spacer + .wp-block-image {
+	padding-top: 35px;
 }
 
 .wp-block-image img {
