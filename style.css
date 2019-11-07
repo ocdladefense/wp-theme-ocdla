@@ -210,6 +210,11 @@ h1 + h2 {
     margin-bottom: 1.0em;
 }
 
+@media screen and (max-width:800px) {
+h2 + .wp-block-image {
+	padding-top:20px;
+}
+}
 
 .bottom-spacer {
 	margin-bottom: 75px;
