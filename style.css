@@ -229,3 +229,9 @@ h2 {
 .wp-block-image img {
     padding-top: 1.0em !important;
 }
+
+
+
+.wp-block-image {
+	margin-bottom: 0px !important;
+}
