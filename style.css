@@ -204,3 +204,8 @@ h1 + h2 {
     margin-top: 0px;
     margin-bottom: 1.0em;
 }
+
+
+.bottom-spacer {
+	margin-bottom: 25px;
+}
