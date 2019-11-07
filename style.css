@@ -225,11 +225,14 @@ h2 {
 	margin-bottom: 75px;
 }
 
-
 .wp-block-image img {
    /* padding-top: 1.0em !important;*/
 }
 
+
+.entry-content p {
+	margin-top:0px !important;
+}
 
 
 .wp-block-image {
