@@ -207,7 +207,6 @@ h4, h5 {
  */
 h1 + h2 {
     margin-top: 0px;
-    margin-bottom: 1.0em;
     padding-top: 1.0em !important;
 }
 
@@ -218,7 +217,7 @@ h2 + .wp-block-image {
 }
 
 h2 {
-	/* padding-bottom: 1.0em; */
+	padding-bottom: 0.5em;
 }
 
 .bottom-spacer {
