@@ -208,6 +208,7 @@ h4, h5 {
 h1 + h2 {
     margin-top: 0px;
     margin-bottom: 1.0em;
+    padding-top: 1.0em !important;
 }
 
 @media screen and (max-width:800px) {
@@ -222,4 +223,9 @@ h2 {
 
 .bottom-spacer {
 	margin-bottom: 75px;
+}
+
+
+.wp-block-image img {
+    padding-top: 1.0em !important;
 }
