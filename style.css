@@ -248,3 +248,8 @@ h2 {
 .break {
 	
 }
+
+
+.bottom-spacer + h1 {
+	padding-top: 40px;
+}
