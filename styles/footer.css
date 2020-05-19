@@ -1,3 +1,14 @@
+footer {
+	background-color:yellow !important;
+	max-height: 400px;
+	padding: 25px;
+}
+
+footer.site-footer .wrap {
+	margin-top: 0px;
+	margin-bottom:0px;
+}
+
 .site-footer {
 	background-color:rgb(238, 241, 249);
 }

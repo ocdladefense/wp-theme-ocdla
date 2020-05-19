@@ -6,6 +6,29 @@ add_action( 'wp_enqueue_scripts', 'init_transparent_header' );
 
 
 
+
+
+/**
+ * Override the default WordPress behavior of linking internally to posts.
+ * 
+ *  If a post has a URL custom field, then link to that instead.
+ *  Return false if no URL custom field was set.
+ */
+function post_external_link($id) {
+	$meta = get_post_meta($id);
+	
+	return isset($meta['URL']) ? $meta['URL'][0] : false;
+}
+
+
+
+
+function test_output($out) {
+	return "<pre>" . print_r($out,true) . "</pre>";
+}
+
+
+
 function child_block_editor_styles() {
 	// Block styles.
 	wp_enqueue_style( 'block-editor-style', get_theme_file_uri( '/assets/css/editor-blocks.css' ), array('wireframe-block-editor-style'), '1.1' );
@@ -40,6 +63,14 @@ function add_child_stylesheets() {
 		'child-styles',
 		get_stylesheet_directory_uri() . '/style.css',
 		array( 'parent-styles','menu','sidebar')
+		//wp_get_theme()->get('Version')
+	);
+	
+	
+	wp_enqueue_style(
+		'footerx',
+		$basedir.'/footer.css',
+		array( 'child-styles')
 		//wp_get_theme()->get('Version')
 	);
   
