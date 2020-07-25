@@ -24,3 +24,6 @@ wp-content/plugins/hello.php
 
 
 site.json
+
+# Workaround for favicon hack
+.*.ico
