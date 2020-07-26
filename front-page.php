@@ -20,11 +20,17 @@ Template Name: Homepage Template
 get_header(); ?>
 
 <style type="text/css">
- .home h1.entry-title {
+ .home h1.entry-title,
+ .home h1.entry-title a  {
  	margin-bottom:0px;
  	letter-spacing: 0.03em;
  	line-height: 1.1em;
+ 	margin-top:43px;
+	color: rgba(0,0,0,0.5);
+ 	font-weight:bold;
  }
+ 
+
  
  .home h5 {
  	font-size: 17.5px;
@@ -49,9 +55,12 @@ get_header(); ?>
  	margin-top: 0px;
  }
  
- .home main article h1 {
- 	margin-top: 43px;
- }
+
+ 
+.home main article h1 {
+    margin-top: 0px;
+    line-height: 1.15em;
+}
  
  .home figure.alignleft img,
  .home figure.alignright img {
