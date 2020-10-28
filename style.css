@@ -86,13 +86,20 @@ ul.gradient-background {
 .sub-menu {
 	width:300px;
 	background-color: rgba(255,255,255,0.9);
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	border-left: 1px solid #eee;
 	z-index:10;
 	left:85% !important;
 	top:-3px;
 }
+
+#sidebar-left .sub-menu {
+
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #eee;
+
+}
+
+
 
 ul.sub-menu {
 	padding-left:0px !important;
