@@ -3,7 +3,9 @@
 
 				
 		<div id="global-header" class="global-header" >
-
+			<?php if ( function_exists( 'salesforce_webserver' ) ) : ?>
+				<a href="<?php echo salesforce_webserver(); ?>"> Login </a> 
+			<?php endif; ?>
 			<div class="gh-item gh-item-1">
 			
 				<!-- <img class="toggles icon toggles-overlay" data-controls="overlay"  src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-icon.png" style="height:25px;" /> -->
