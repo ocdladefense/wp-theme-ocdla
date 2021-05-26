@@ -4,9 +4,10 @@
 				
 		<div id="global-header" class="global-header" >
 			<?php if (!is_user_logged_in()) : ?>
-				<a href="<?php echo salesforce_oauth_url_customer(); ?>"> Login </a> 
+				<a href="sso-login"> Login </a> 
 			<?php else : ?>
-				Logout  <!--need to do single sign on logout functionality.  When the user logs out they should be redirected to the 
+				<a href="<?php echo wp_logout_url(get_permalink()); ?>">Logout</a>
+				  <!--need to do single sign on logout functionality.  When the user logs out they should be redirected to the 
 							wordpress home page.  The wordpress default behavior is to show the wordpress login page to the user. -->
 			<?php endif; ?>
 			<div class="gh-item gh-item-1">
