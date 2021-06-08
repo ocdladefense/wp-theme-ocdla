@@ -122,7 +122,7 @@ get_header(); ?>
 
                 <?php foreach ($committees as $committee) : ?>
 
-                    <a href="http://sf/page?data=<?php echo $committee["Name"]; ?>">
+                    <a href="/page?data=<?php echo $committee["Name"]; ?>">
                         <h3 class="ml-5" style="padding-left: 12px;"><?php print $committee["Name"]; ?></h3>
                     </a>
                     <div class="w-auto ml-5 mt-3 mb-5 mr-5">
@@ -131,7 +131,7 @@ get_header(); ?>
                         <?php foreach ($members as $member) : ?>
 
                             <span style="padding-left: 12px;">
-                                <a href="https://members.ocdla.org/directory/member/<?php print $member["Id"]; ?>" target="_blank" id="name">
+                                <a href="<?php print OCDLA_MEMBERSHIP_DIRECTORY_DOMAIN; ?>/directory/member/<?php print $member["Id"]; ?>" target="_blank" id="name">
                                     <?php print $member["Name"] . $separator; ?>
                                 </a>
                             </span>
@@ -154,20 +154,7 @@ get_header(); ?>
                 <?php endforeach; ?>
             <?php endif; ?>
 
-            <?php
-            /*while ( have_posts() ) :
-				the_post();
 
-				get_template_part( 'template-parts/page/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			*/
-            ?>
 
         </main><!-- #main -->
     </div><!-- #primary -->
