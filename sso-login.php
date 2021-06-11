@@ -48,20 +48,6 @@ get_header(); ?>
 		<div style="    width: 100%; padding: 10px; display: block;"></div>
 		<a class="primary" href="<?php echo salesforce_oauth_url_admin(); ?>" title="Login Admin">Login as Administrator</a>
 		<a class="primary" href="<?php echo salesforce_oauth_url_customer(); ?>" title="Login Customer">Login as customer</a>
-			<?php
-			/*while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/page/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			*/
-            ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
