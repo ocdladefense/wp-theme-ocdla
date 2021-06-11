@@ -1,3 +1,5 @@
+
+
 <style>
     .primary {
         border: #50668F;
@@ -25,6 +27,50 @@
     }
 </style>
 
+<style type="text/css">
+    .table-headers {
+        display: none;
+    }
+
+    #intro {
+        font-size: 18px;
+    }
+
+    h1 {
+        padding-left: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 1.0em;
+    }
+
+    h3 {
+        color: #bf9500;
+    }
+
+    #email {
+        color: rgba(0, 0, 139, 0.8);
+        font-weight: bold;
+    }
+
+    #name {
+        color: grey;
+    }
+
+    #city {
+        color: #53638c;
+        font-weight: 600;
+    }
+
+    p {
+        word-wrap: break-word;
+    }
+
+    @media screen and (min-width: 800px) {
+        .table-headers {
+            display: table-row;
+        }
+    }
+</style>
 
 <?php
 /**
@@ -49,56 +95,10 @@ get_header(); ?>
 
 <div class="page-wrap wrap">
     <?php get_sidebar('left'); ?>
+
     <div id="primary" class="basic-page content-area">
         <main id="main" class="site-main" role="main">
             <br />
-
-            <style type="text/css">
-                .table-headers {
-                    display: none;
-                }
-
-                #intro {
-                    font-size: 18px;
-                }
-
-                h1 {
-                    padding-left: 12px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.14em;
-                    font-size: 1.0em;
-                }
-
-                h3 {
-                    color: #bf9500;
-                }
-
-                #email {
-                    color: rgba(0, 0, 139, 0.8);
-                    font-weight: bold;
-                }
-
-                #name {
-                    color: grey;
-                }
-
-                #city {
-                    color: #53638c;
-                    font-weight: 600;
-                }
-
-                p {
-                    word-wrap: break-word;
-                }
-
-                @media screen and (min-width: 800px) {
-                    .table-headers {
-                        display: table-row;
-                    }
-                }
-            </style>
-
-            <?php $separator = "<span style='color: #bf9500; font-weight: bold;'> | </span>"; ?>
 
             <div>
                 <h1 class="text-muted ml-5 mt-5 font-weight-bold">Committees & Task Forces</h1>
@@ -119,47 +119,79 @@ get_header(); ?>
                 </ul>
 
             <?php else : ?>
-
+                
                 <?php foreach ($committees as $committee) : ?>
 
                     <a href="/page?data=<?php echo $committee["Name"]; ?>">
                         <h3 class="ml-5" style="padding-left: 12px;"><?php print $committee["Name"]; ?></h3>
                     </a>
+
                     <div class="w-auto ml-5 mt-3 mb-5 mr-5">
 
-                        <?php $members = $committee["members"]; ?>
-                        <?php foreach ($members as $member) : ?>
+                        <?php foreach ($committee["members"] as $member) :
+
+                            $hasPosition = hasPosition($member);
+                            $directoryLink = OCDLA_MEMBERSHIP_DIRECTORY_DOMAIN . "/directory/member/{$member['Id']}";
+                            $separator = "<span style='color: #bf9500; font-weight: bold;'> | </span>";
+                            $email = $member["Email"];
+                        ?>
+                            
 
                             <span style="padding-left: 12px;">
-                                <a href="<?php print OCDLA_MEMBERSHIP_DIRECTORY_DOMAIN; ?>/directory/member/<?php print $member["Id"]; ?>" target="_blank" id="name">
-                                    <?php print $member["Name"] . $separator; ?>
+                                <a href="<?php print $directoryLink; ?>" target="_blank">
+                                    <?php print $member["Name"]; ?>
+                                    <span style='color: #bf9500; font-weight: bold;'> | </span>
                                 </a>
                             </span>
-                            <span style="font-weight:<?php print hasPosition($member) ? "bold" : ""; ?>;">
-                                <?php substr($member["Role"], -4) != "mber" ? print $member["Role"] . $separator : ""; ?>
+
+                            <span style="font-weight:<?php print $hasPosition ? "bold" : ""; ?>;">
+                                <?php if($hasPosition) :
+                                    print $member["Role"];
+                                ?>
+                                    <span style='color: #bf9500; font-weight: bold;'> | </span>
+
+                                <?php endif; ?>
+
                             </span>
+
                             <span id="city">
-                                <?php $member["City"] != null ? print $member["City"] . $separator : ""; ?>
+                                <?php if($member["City"] != null) :
+                                    print $member["City"];
+                                ?>
+                                    <span style='color: #bf9500; font-weight: bold;'> | </span>
+                                    
+                                <?php endif; ?>
                             </span>
+
                             <span>
-                                <?php $email = $member["Email"]; ?>
                                 <?php echo "<a href='mailto:$email' id='email'>Email</a>"; ?>
                             </span>
-                            <br>
 
+                            <br />
+                                
                         <?php endforeach; ?>
 
                     </div>
 
+                    <div style="margin-top:5px;">
+                        <?php $linkInfo = getCommitteeLink($committee["Name"]); ?>
+
+                        <a href="<?php print get_site_url() . $linkInfo['url']; ?>"><?php print $linkInfo["text"]; ?></a>
+                    </div>
+
+
                 <?php endforeach; ?>
+
+                <p>Check the OCDLA&nbsp;<a href="https://cases.ocdla.org/calendar/">calendar</a>&nbsp;for upcoming committee meetings.</p>
+                
             <?php endif; ?>
 
-
-
         </main><!-- #main -->
+
     </div><!-- #primary -->
+
     <?php get_sidebar('right'); ?>
+
 </div><!-- .wrap -->
 
-<?php
-get_footer();
+<?php get_footer();

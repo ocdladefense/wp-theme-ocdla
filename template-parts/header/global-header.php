@@ -4,7 +4,7 @@
 				
 		<div id="global-header" class="global-header" >
 			<?php if (!is_user_logged_in()) : ?>
-				<a href="sso-login"> Login </a> 
+				<a href="<?php print get_site_url() . '/sso-login'; ?>"> Login </a> 
 			<?php else : ?>
 				<a href="<?php echo wp_logout_url(get_permalink()); ?>">Logout</a>
 				  <!--need to do single sign on logout functionality.  When the user logs out they should be redirected to the 
