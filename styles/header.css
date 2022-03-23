@@ -19,3 +19,6 @@
 	margin-left: 18%;
 }
 
+#sso-login {
+	display:none;
+}
